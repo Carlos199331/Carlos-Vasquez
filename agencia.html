@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Agencia de Viajes Maravillosos</title>
+    <style>
+
+        body {
+            background-color: #f0f8ff;
+            margin: 2%;
+            padding: 3%;
+            font-family: Arial, sans-serif;
+            border: 5px solid #4682b4;
+        }
+
+        header {
+            background-color: #4682b4;
+            color: #ffffff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        main {
+            background-color: #fafafa;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #add8e6;
+            color: #2f4f4f;
+            padding: 10px;
+            text-align: center;
+            border: solid #2f4f4f;
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-family: 'Arial', sans-serif;
+            color: #2f4f4f;
+            font-size: large;
+        }
+
+        p {
+            font-family: 'Arial', sans-serif;
+            color: #2e8b57;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: circle;
+            margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #4682b4;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f8ff;
+        }
+
+        .img1, .img2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .audio1, .audio2 {
+            margin-top: 20px;
+        }
+
+        /* Estilos para las imágenes */
+        img {
+            width: 30%; /* Tamaño deseado de las imágenes */
+            border: 2px solid #ccc; /* Borde de 2px sólido gris claro */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        /* Estilos para el audio */
+        audio {
+            width: 80%; /* Ancho completo del contenedor */
+        }
+
+        /* Estilos para el enlace */
+        a {
+            color: #007bff; /* Color azul para el enlace */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        iframe {
+            border: solid #2f4f4f;
+        }
+
+        /* Estilos para el contenedor de anuncios emergentes */
+        .popup-container {
+            display: none; /* Ocultar anuncios inicialmente */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .popup .close-btn {
+            background-color: #4682b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Agencia de Viajes Maravillosos</h1>
+</header>
+<nav class="menu">
+    <ul>
+        <li><a href="#post-1">Destinos Destacados</a></li>
+        <li><a href="#post-2">Ofertas y Promociones</a></li>
+        <li><a href="#post-3">Guías de Viaje</a></li>
+        <li><a href="#post-4">Formulario de Reserva</a></li>
+    </ul>
+</nav>
+<main>
+    <article id="post-1">
+        <div class="elemento1">      
+            <h2>Destinos Destacados</h2>
+            <p>Descubre los destinos más maravillosos del mundo. Desde playas paradisíacas hasta imponentes montañas, tenemos el lugar perfecto para tus próximas vacaciones.</p>
+            <p><strong>¡Contáctanos al 300 400 5000 para más información!</strong></p>
+        </div>
+    </article>
+
+    <div class="container">     
+        <div class="elemento2">
+            <h3>Horarios de Atención</h3>
+            <table>
+                <tr>
+                    <th>Día</th>
+                    <th>Horarios</th>
+                </tr>
+                <tr>
+                    <td>Lunes a Viernes</td>
+                    <td>08:00 AM a 06:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Sábados</td>
+                    <td>09:00 AM a 02:00 PM</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="elemento2">
+            <h3>Horarios de Viajes a Europa</h3>
+            <table>
+                <tr>
+                    <th>Día</th>
+                    <th>Destino</th>
+                    <th>Hora de Salida</th>
+                </tr>
+                <tr>
+                    <td>Lunes</td>
+                    <td>Barcelona</td>
+                    <td>10:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>París</td>
+                    <td>11:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>Roma</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>Londres</td>
+                    <td>01:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>Amsterdam</td>
+                    <td>02:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>Berlín</td>
+                    <td>03:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>Madrid</td>
+                    <td>04:00 PM</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <article id="post-2">
+        <div class="elemento3">
+            <h4>Ofertas y Promociones</h4>
+            <ul>
+                <li><p>2x1 en viajes a Europa.</p></li>
+                <li><p>Descuento del 20% en viajes a las Islas del Caribe.</p></li>
+                <li><p>Promoción especial: Viaja por Sudamérica con un 15% de descuento.</p></li>
+            </ul>  
+        </div>
+    </article>
+
+    <article id="post-3">
+        <div class="elemento4">
+            <h5>Guías de Viaje</h5>
+            <p>
+                "Explora nuestras guías de viaje para prepararte mejor para tus aventuras. Encontrarás recomendaciones sobre qué ver, dónde comer y cómo moverte en cada destino. Ya sea que viajes solo o en grupo, nuestras guías están diseñadas para ayudarte a disfrutar al máximo tu experiencia."
+            </p>
+            <div class="img1">
+                <img src="https://via.placeholder.com/200x150" alt="Imagen de Barcelona">
+                <img src="https://via.placeholder.com/200x150" alt="Imagen de París">
+                <img src="https://via.placeholder.com/200x150" alt="Imagen de Roma">
+            </div>
+            <div class="audio1">
+                <audio controls>
+                    <source src="audio1.m4a">
+                </audio>
+            </div>
+            <br>
+            <a href="https://es.wikipedia.org/wiki/Gu%C3%ADa_de_viaje">¿Quieres saber más?</a>
+        </div>
+    </article>
+    
+    <div class="elemento5">
+            <h6>Video Destinos</h6>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/destinoVideo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+    <article id="post-4">
+        <div class="elemento6">
+            <h2>Formulario de Reserva</h2>
+            <form id="reservaForm">
+                <label for="id_cliente">ID Cliente:</label><br>
+                <input type="text" id="id_cliente" name="id_cliente"><br><br>
+                <label for="fecha_reserva">Fecha de Reserva:</label><br>
+                <input type="date" id="fecha_reserva" name="fecha_reserva"><br><br>
+                <label for="id_vuelo">ID Vuelo:</label><br>
+                <input type="text" id="id_vuelo" name="id_vuelo"><br><br>
+                <label for="id_hotel">ID Hotel:</label><br>
+                <input type="text" id="id_hotel" name="id_hotel"><br><br>
+                <label for="hotel_nombre">Nombre del Hotel:</label><br>
+                <input type="text" id="hotel_nombre" name="hotel_nombre"><br><br>
+                <label for="fecha_ingreso">Fecha de Ingreso:</label><br>
+                <input type="date" id="fecha_ingreso" name="fecha_ingreso"><br><br>
+                <label for="fecha_salida">Fecha de Salida:</label><br>
+                <input type="date" id="fecha_salida" name="fecha_salida"><br><br>
+                <input type="submit" value="Reservar">
+            </form>
+            <div id="resultado_hoteles"></div>
+        </div>
+    </article>
+    
+    <div class="elemento7">
+        <h2>Suscripción a boletín</h2>
+        <form action="procesar.php" method="post">
+            <p>
+                <label> Nombre:<input type="text" name="name" placeholder="Ingrese su nombre"></label>
+                <label> Correo:<input type="text" name="email" placeholder="Ingrese su correo"></label>
+            </p>
+            <label> Descripción</label>
+            <br>
+            <textarea name="descripcion1" cols="30" rows="10" placeholder="Contáctanos con tus preguntas"></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>   
+</main>
+
+<!-- Contenedor de anuncios emergentes -->
+<div class="popup-container" id="popup-container">
+    <div class="popup">
+        <h2>¡Oferta Especial!</h2>
+        <p>Aprovecha un 50% de descuento en todos los viajes a Europa si reservas hoy.</p>
+        <button class="close-btn" onclick="cerrarPopup()">Cerrar</button>
+    </div>
+</div>
+
+<footer>
+    <p>Correo: <strong>viajesmaravillosos@gmail.com</strong></p>
+    <p>¡Muchas gracias por tu preferencia!</p>
+</footer>  
+
+<script>
+// Función para buscar hoteles
+async function buscarHoteles() {
+    const hotelNombre = document.getElementById('hotel_nombre').value;
+    const fechaIngreso = document.getElementById('fecha_ingreso').value;
+    const fechaSalida = document.getElementById('fecha_salida').value;
+    
+    try {
+        const response = await fetch(`https://api.example.com/hotels?nombre=${hotelNombre}&checkin=${fechaIngreso}&checkout=${fechaSalida}`);
+        const data = await response.json();
+        
+        // Manejo de la respuesta
+        mostrarHoteles(data.hoteles);
+    } catch (error) {
+        console.error('Error al buscar hoteles:', error);
+    }
+}
+
+function mostrarHoteles(hoteles) {
+    const seccionResultado = document.getElementById('resultado_hoteles');
+    seccionResultado.innerHTML = '';
+
+    hoteles.forEach(hotel => {
+        const divHotel = document.createElement('div');
+        divHotel.innerHTML = `
+            <h3>${hotel.nombre}</h3>
+            <p>${hotel.descripcion}</p>
+            <p>Precio: ${hotel.precio}</p>
+            <button onclick="reservarHotel(${hotel.id})">Reservar</button>
+        `;
+        seccionResultado.appendChild(divHotel);
+    });
+}
+
+async function reservarHotel(hotelId) {
+    const hotelNombre = document.getElementById('hotel_nombre').value;
+    const fechaIngreso = document.getElementById('fecha_ingreso').value;
+    const fechaSalida = document.getElementById('fecha_salida').value;
+
+    try {
+        const response = await fetch(`https://api.example.com/reservas`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                hotelId,
+                fechaIngreso,
+                fechaSalida
+            })
+        });
+        
+        const data = await response.json();
+        alert('Reserva realizada con éxito: ' + data.confirmationCode);
+    } catch (error) {
+        console.error('Error al reservar hotel:', error);
+    }
+}
+
+document.getElementById('reservaForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    buscarHoteles();
+});
+
+// Función para mostrar el anuncio emergente
+function mostrarPopup() {
+    document.getElementById('popup-container').style.display = 'flex';
+}
+
+// Función para cerrar el anuncio emergente
+function cerrarPopup() {
+    document.getElementById('popup-container').style.display = 'none';
+}
+
+// Mostrar el anuncio emergente después de 3 segundos
+setTimeout(mostrarPopup, 3000);
+
+</script>
+
+</body>
+</html>
